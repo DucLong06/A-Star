@@ -13,11 +13,11 @@ class App:
         self.clock = pg.time.Clock()
 
         # UI
-        self.instructions = Button("Instructions", (100, 30), (10, 10))
+        self.instructions = Button("Huong dan", (100, 30), (10, 10))
         self.instructions.on_click(self.show_instructions)
-        self.settings = Button("Settings", (100, 30), (10, 50))
+        self.settings = Button("Cai dat", (100, 30), (10, 50))
         self.settings.on_click(self.show_settings)
-        self.pause = Button("Pause", (100, 30), (790, 10), bg_color=pg.Color('yellow'), anchor='topright')
+        self.pause = Button("Dung", (100, 30), (790, 10), bg_color=pg.Color('yellow'), anchor='topright')
         self.pause.on_click(self.do_pause)
         self.sett, self.inst = False, False
         self.paused = False
@@ -32,7 +32,7 @@ class App:
         self.sett = not self.sett
 
     def do_pause(self):
-        self.pause.set_text("Pause" if self.paused else "Resume")
+        self.pause.set_text("Dung" if self.paused else "bat dau tro lai")
         self.paused = not self.paused
 
     def run(self):

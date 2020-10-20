@@ -60,10 +60,6 @@ class Graph:
                 pos = offx + (x * Node.SIZE), offy + (y * Node.SIZE)
                 n = Node(pos, True)
                 res.append(n)
-        print("cx = ",cx)
-        print("cy = ",cy)
-        print("offy = ",offy)
-        print("offx = ",offx)
         return res
 
     def draw(self, surface):
@@ -76,7 +72,7 @@ class Graph:
         if self.agents:
             for ag in self.agents:
                 ag.draw(surface)
-
+        
         # Draw Target
         if self.target:
             pg.draw.circle(surface, pg.Color('black'), self.target, 20)
@@ -168,4 +164,4 @@ class Graph:
         return res
 
     def cost(self, p1, p2):
-        return 10
+        return 50

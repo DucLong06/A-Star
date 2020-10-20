@@ -4,7 +4,7 @@ import pygame as pg
 
 def draw_header(surface):
     h_size = 100
-    font_name = pg.font.match_font('arial')
+    font_name = pg.font.match_font("Cyberbit.ttf",20)
 
     # title font
     tfont = pg.font.Font(font_name, 40)
@@ -21,7 +21,7 @@ def draw_instructions(surface):
     surf.fill(BACKGROUND)
     rect = surf.get_rect(center=(400, 300))
 
-    font_name = pg.font.match_font('arial')
+    font_name = pg.font.match_font("Cyberbit.ttf",20)
     font = pg.font.Font(font_name, 18)
     font.set_bold(True)
 
@@ -70,7 +70,7 @@ class Button:
         surf.fill(self.background_color)
 
         # Create text
-        font_name = pg.font.match_font('arial')
+        font_name = pg.font.match_font("Cyberbit.ttf",20)
         font = pg.font.Font(font_name, self.font_size)
         font.set_bold(True)
 
